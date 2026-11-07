@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aero VPN</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080808;
+ color:white;
+ font-family:Arial,sans-serif;
+ padding:25px 18px;
+}
+.logo{
+ text-align:center;
+ font-size:48px;
+ font-weight:bold;
+ color:#319cff;
+ margin:35px 0 10px;
+}
+h1{text-align:center;font-size:29px}
+.sub{text-align:center;color:#888;margin-bottom:35px}
+.card{
+ background:#191919;
+ border-radius:20px;
+ padding:22px;
+ margin:15px 0;
+}
+.status{
+ text-align:center;
+ color:#39d98a;
+ font-size:17px;
+}
+button{
+ width:100%;
+ padding:19px;
+ border:0;
+ border-radius:15px;
+ margin-top:13px;
+ background:linear-gradient(90deg,#168cff,#6455ff);
+ color:white;
+ font-size:17px;
+ font-weight:bold;
+}
+.secondary{
+ background:#292929;
+}
+h3{margin-top:0}
+.info{color:#aaa;font-size:14px}
+.footer{
+ text-align:center;
+ color:#666;
+ margin-top:35px;
+ font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<div class="logo">AERO VPN</div>
+<h1>Добро пожаловать!</h1>
+<div class="sub">Быстрый и безопасный интернет</div>
+
+<div class="card">
+ <div class="status">● Aero VPN готов</div>
+ <h2 style="text-align:center">Главное меню</h2>
+ <button onclick="msg('Функция подключения будет настроена')">
+ ⚡ Подключить VPN
+ </button>
+ <button class="secondary" onclick="msg('Получение конфигурации будет настроено')">
+ 🔑 Получить конфигурацию
+ </button>
+</div>
+
+<div class="card">
+ <h3>👤 Мой профиль</h3>
+ <p class="info">Управление вашим аккаунтом Aero VPN</p>
+ <button class="secondary" onclick="msg('Профиль будет подключён к боту')">
+ Мой аккаунт
+ </button>
+</div>
+
+<div class="card">
+ <h3>💎 Подписка</h3>
+ <p class="info">Информация о тарифах и подписке</p>
+ <button class="secondary" onclick="msg('Тарифы будут добавлены')">
+ Выбрать тариф
+ </button>
+</div>
+
+<div class="card">
+ <h3>🛠 Поддержка</h3>
+ <p class="info">Возникли вопросы? Мы поможем!</p>
+ <button class="secondary" onclick="msg('Поддержка скоро появится')">
+ Написать в поддержку
+ </button>
+</div>
+
+<div class="footer">
+ AERO VPN © 2026<br>
+ Безопасность и свобода в интернете
+</div>
+
+<script>
+const tg=window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+function msg(text){
+ tg.showAlert(text);
+}
+</script>
+</body>
+</html>
